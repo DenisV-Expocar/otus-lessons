@@ -1,0 +1,39 @@
+<div class="user-card" style="max-width: 600px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div class="avatar" style="text-align: center;">
+        <img 
+            src="{{ USER.PHOTO }}" 
+            alt="Аватар" 
+            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #eee;"
+        >
+    </div>
+
+    <div class="user-info" style="margin-top: 25px;">
+        <h2 style="text-align: center; color: #2d2d2d; margin-bottom: 15px;">
+            {{ USER.NAME }} {{ USER.LAST_NAME }}
+        </h2>
+
+        <div class="details" style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <div class="detail-item" style="margin-bottom: 10px;">
+                <strong>Email:</strong> 
+                <a href="mailto:{{ USER.EMAIL }}" style="color: #007bff; text-decoration: none;">
+                    {{ USER.EMAIL }}
+                </a>
+            </div>
+
+            {% if USER.POSITION %}
+                <div class="detail-item" style="margin-bottom: 10px;">
+                    <strong>Должность:</strong> {{ USER.POSITION }}
+                </div>
+            {% endif %}
+
+            {% if USER.PHONE %}
+                <div class="detail-item">
+                    <strong>Телефон:</strong> 
+                    <a href="tel:{{ USER.PHONE }}" style="color: #28a745; text-decoration: none;">
+                        {{ USER.PHONE }}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
