@@ -15,3 +15,14 @@
 
 #Composer
 /vendor/*
+
+#Logs
+/logs/
+
+#Игнорировать файлы с расшарением
+*.pdf
+*.log
+*.txt
+*.sql
+*.docx
+*.doc
